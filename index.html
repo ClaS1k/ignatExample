@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Game</title>
+  <meta charset="utf-8">
+  <style>
+    *{
+      margin:0px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    .content{
+      width:100%;
+      height:100%;
+    }
+    canvas{
+      background:#eee;
+      display:none;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+    .StartPage{
+      width:400px;
+      height:600px;
+      position:absolute;
+      top:15%;
+      left:450px;
+      border-radius: 5px;
+    }
+    .StartPageBg{
+      width:400px;
+      height:180px;
+      position:absolute;
+      top:15%;
+      left:450px;
+      border-radius: 5px;
+      background: #eee;
+      opacity: 0.3;
+    }
+    h2{
+      font-style: italic;
+      color:green;
+    }
+    .nickname{
+      width:200px;
+      height:30px;
+      font-size: 25px;
+      font-style:italic;
+      border-radius: 4px;
+      position: absolute;
+      top:50px;
+      left:100px;
+    }
+    .startBtn{
+      width:150px;
+      height:25px;
+      border-radius:5px;
+      position:absolute;
+      left:125px;
+      top:100px;
+    }
+    img{
+      width:100%;
+      height:100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="content" id="contents">
+    <img src="src/kartinki.me-5977.jpg"></img>
+    <div class="StartPageBg"></div>
+    <div class="StartPage">
+      <h2 align="center">Clean the planet!</h2>
+      <input type="text" placeholder="Nickname" id="nickname" class="nickname">
+      <input type="button" value="начать игру" onclick="gameStart()" class="startBtn" id="startBtnMenu">
+    </div>
+  </div>
+  <canvas id="GameCanvas" width="1300" height="700">
+  </canvas>
+  <script src="script.js">
+  </script>
+</body>
+</html>
